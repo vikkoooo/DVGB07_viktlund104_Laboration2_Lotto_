@@ -261,8 +261,7 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 
 			return generateLotto(n - 1);
 		}
-
-
+		
 		// Checks how many correct numbers the user had in his choices, returns the amount of correct numbers.
 		private int checkUserScore(List<int> winningNumbers_)
 		{
@@ -275,9 +274,8 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 					score++;
 				}
 			}
-
 			return score;
 		}
-		
+
 	}
 }
