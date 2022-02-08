@@ -134,7 +134,7 @@
 			this.numberLottosTextBox.Name = "numberLottosTextBox";
 			this.numberLottosTextBox.Size = new System.Drawing.Size(163, 20);
 			this.numberLottosTextBox.TabIndex = 3;
-			this.numberLottosTextBox.Text = "1";
+			this.numberLottosTextBox.Text = "8000";
 			// 
 			// startLottoButton
 			// 
