@@ -46,12 +46,6 @@
 			this.sixCorrectTextBox = new System.Windows.Forms.TextBox();
 			this.sevenCorrectLabel = new System.Windows.Forms.Label();
 			this.sevenCorrectTextBox = new System.Windows.Forms.TextBox();
-			this.threeCorrectLabel = new System.Windows.Forms.Label();
-			this.twoCorrectTextBox = new System.Windows.Forms.TextBox();
-			this.fourCorrectTextBox = new System.Windows.Forms.TextBox();
-			this.threeCorrectTextBox = new System.Windows.Forms.TextBox();
-			this.twoCorrectLabel = new System.Windows.Forms.Label();
-			this.fourCorrectLabel = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// yourLottoLabel
@@ -134,7 +128,7 @@
 			this.numberLottosTextBox.Name = "numberLottosTextBox";
 			this.numberLottosTextBox.Size = new System.Drawing.Size(163, 20);
 			this.numberLottosTextBox.TabIndex = 3;
-			this.numberLottosTextBox.Text = "8000";
+			this.numberLottosTextBox.Text = "999999";
 			// 
 			// startLottoButton
 			// 
@@ -197,66 +191,12 @@
 			this.sevenCorrectTextBox.Size = new System.Drawing.Size(65, 20);
 			this.sevenCorrectTextBox.TabIndex = 5;
 			// 
-			// threeCorrectLabel
-			// 
-			this.threeCorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-			this.threeCorrectLabel.Location = new System.Drawing.Point(264, 175);
-			this.threeCorrectLabel.Name = "threeCorrectLabel";
-			this.threeCorrectLabel.Size = new System.Drawing.Size(52, 23);
-			this.threeCorrectLabel.TabIndex = 0;
-			this.threeCorrectLabel.Text = "3 rätt:";
-			// 
-			// twoCorrectTextBox
-			// 
-			this.twoCorrectTextBox.Location = new System.Drawing.Point(187, 174);
-			this.twoCorrectTextBox.Name = "twoCorrectTextBox";
-			this.twoCorrectTextBox.ReadOnly = true;
-			this.twoCorrectTextBox.Size = new System.Drawing.Size(65, 20);
-			this.twoCorrectTextBox.TabIndex = 5;
-			// 
-			// fourCorrectTextBox
-			// 
-			this.fourCorrectTextBox.Location = new System.Drawing.Point(438, 172);
-			this.fourCorrectTextBox.Name = "fourCorrectTextBox";
-			this.fourCorrectTextBox.ReadOnly = true;
-			this.fourCorrectTextBox.Size = new System.Drawing.Size(65, 20);
-			this.fourCorrectTextBox.TabIndex = 5;
-			// 
-			// threeCorrectTextBox
-			// 
-			this.threeCorrectTextBox.Location = new System.Drawing.Point(312, 172);
-			this.threeCorrectTextBox.Name = "threeCorrectTextBox";
-			this.threeCorrectTextBox.ReadOnly = true;
-			this.threeCorrectTextBox.Size = new System.Drawing.Size(65, 20);
-			this.threeCorrectTextBox.TabIndex = 5;
-			// 
-			// twoCorrectLabel
-			// 
-			this.twoCorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-			this.twoCorrectLabel.Location = new System.Drawing.Point(138, 177);
-			this.twoCorrectLabel.Name = "twoCorrectLabel";
-			this.twoCorrectLabel.Size = new System.Drawing.Size(52, 23);
-			this.twoCorrectLabel.TabIndex = 0;
-			this.twoCorrectLabel.Text = "2 rätt:";
-			// 
-			// fourCorrectLabel
-			// 
-			this.fourCorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-			this.fourCorrectLabel.Location = new System.Drawing.Point(390, 175);
-			this.fourCorrectLabel.Name = "fourCorrectLabel";
-			this.fourCorrectLabel.Size = new System.Drawing.Size(52, 23);
-			this.fourCorrectLabel.TabIndex = 0;
-			this.fourCorrectLabel.Text = "4 rätt:";
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(634, 279);
-			this.Controls.Add(this.fourCorrectTextBox);
 			this.Controls.Add(this.sevenCorrectTextBox);
-			this.Controls.Add(this.twoCorrectTextBox);
-			this.Controls.Add(this.threeCorrectTextBox);
 			this.Controls.Add(this.sixCorrectTextBox);
 			this.Controls.Add(this.fiveCorrectTextBox);
 			this.Controls.Add(this.startLottoButton);
@@ -268,9 +208,6 @@
 			this.Controls.Add(this.fifthNumberTextBox);
 			this.Controls.Add(this.secondNumberTextBox);
 			this.Controls.Add(this.sevenCorrectLabel);
-			this.Controls.Add(this.twoCorrectLabel);
-			this.Controls.Add(this.fourCorrectLabel);
-			this.Controls.Add(this.threeCorrectLabel);
 			this.Controls.Add(this.firstNumberTextBox);
 			this.Controls.Add(this.sixCorrectLabel);
 			this.Controls.Add(this.numberLottosLabel);
@@ -282,15 +219,8 @@
 			this.PerformLayout();
 		}
 
-		private System.Windows.Forms.TextBox threeCorrectTextBox;
-		private System.Windows.Forms.Label twoCorrectLabel;
-		private System.Windows.Forms.Label fourCorrectLabel;
-
-		private System.Windows.Forms.Label threeCorrectLabel;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox twoCorrectTextBox;
-		private System.Windows.Forms.TextBox fourCorrectTextBox;
 		private System.Windows.Forms.TextBox fourCorrectText;
 
 		private System.Windows.Forms.Label sixCorrectLabel;

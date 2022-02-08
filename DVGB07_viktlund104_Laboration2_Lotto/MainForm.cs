@@ -17,13 +17,14 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 		private int maxBound = 35; // high bound, inclusive
 		private int minSimulations = 1; //inclusive
 		private int maxSimulations = 999999; //inclusive
-		private int n = 0; // how many times to simulate
+		private int n; // how many times to simulate (user choice)
 		private int lottoNumbers = 7; // how many lotto numbers to pull
+
+		// Instances
 		private List<int> choices;
 		private Random rand = new Random();
-		private int twoCorrect;
-		private int threeCorrect;
-		private int fourCorrect;
+
+		// Counters
 		private int fiveCorrect;
 		private int sixCorrect;
 		private int sevenCorrect;
@@ -37,7 +38,7 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 		// When we click the button, start the lotto
 		private void startLottoButton_Click(object sender, EventArgs e)
 		{
-			// Initialize counts
+			// Initialize counters
 			fiveCorrect = 0;
 			sixCorrect = 0;
 			sevenCorrect = 0;
@@ -62,12 +63,9 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 			}
 
 			// We got OK inputs. Run the test
-			generateLotto(n);
+			generateLotto();
 
 			// Display results
-			twoCorrectTextBox.Text = twoCorrect.ToString();
-			threeCorrectTextBox.Text = threeCorrect.ToString();
-			fourCorrectTextBox.Text = fourCorrect.ToString();
 			fiveCorrectTextBox.Text = fiveCorrect.ToString();
 			sixCorrectTextBox.Text = sixCorrect.ToString();
 			sevenCorrectTextBox.Text = sevenCorrect.ToString();
@@ -165,8 +163,7 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 
 			return false;
 		}
-
-
+		
 		// Parses number of tries to user input. True if success, false if user provided us with some wrong inputs
 		private bool numberOfTriesInBounds()
 		{
@@ -196,18 +193,11 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 
 			return true;
 		}
-
-
+		
 		// Generates a new lotto draw. It then checks how many the user had correct, before it calls itself again
-		private int generateLotto(int n)
+		private void generateLotto()
 		{
-			if (n == 0)
-			{
-				return 0;
-			}
-
 			List<int> possibleNumbers = new List<int>(maxBound - minBound);
-			List<int> winningNumbers = new List<int>(lottoNumbers);
 
 			// fill list with possible drawings
 			for (int i = minBound; i <= maxBound; i++)
@@ -215,53 +205,48 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 				possibleNumbers.Add(i);
 			}
 
-			// pull out a number using the indexes of the list
-			for (int i = 0; i < lottoNumbers; i++)
+			// Generate until we have reached our target n
+			while (n > 0) // in numberOfTriesInBounds n is assigned to user choice
 			{
-				int draw = rand.Next(possibleNumbers.Count); // get index of number to pull out
+				List<int> possibleNumbersTemp = new List<int>(possibleNumbers); //make a temporary copy
+				List<int> winningNumbers = new List<int>(lottoNumbers);
 
-				winningNumbers.Add(possibleNumbers[draw]); // add winning number to winning list
-				possibleNumbers.RemoveAt(draw); // remove already drawn number from being drawn again
-			}
-			
-			// check user score
-			int score = checkUserScore(winningNumbers);
-			// int score = checkUserScoreOptimized(winningNumbers);
-			
-			// Assign score to our counter class variables
-			if (score == 2)
-			{
-				twoCorrect++;
-			}
-			
-			if (score == 3)
-			{
-				threeCorrect++;
-			}
+				// pull out a number using the indexes of the list
+				for (int i = 0; i < lottoNumbers; i++)
+				{
+					int draw = rand.Next(possibleNumbersTemp.Count); // get index of number to pull out
 
-			if (score == 4)
-			{
-				fourCorrect++;
-			}
+					winningNumbers.Add(possibleNumbersTemp[draw]); // add winning number to winning list
+					possibleNumbersTemp.RemoveAt(draw); // remove already drawn number from being drawn again
+				}
 
-			if (score == 5)
-			{
-				fiveCorrect++;
-			}
+				// check user score
+				int score = checkUserScore(winningNumbers);
 
-			if (score == 6)
-			{
-				sixCorrect++;
-			}
+				// Assign score to our counter class variables
+				if (score == 5)
+				{
+					fiveCorrect++;
+				}
 
-			if (score == 7)
-			{
-				sevenCorrect++;
-			}
+				if (score == 6)
+				{
+					sixCorrect++;
+				}
 
-			return generateLotto(n - 1);
+				if (score == 7)
+				{
+					sevenCorrect++;
+				}
+
+				// Clear lists to save memory space. We don't need them anymore
+				possibleNumbersTemp.Clear();
+				winningNumbers.Clear();
+
+				n--;
+			}
 		}
-		
+
 		// Checks how many correct numbers the user had in his choices, returns the amount of correct numbers.
 		private int checkUserScore(List<int> winningNumbers_)
 		{
@@ -274,8 +259,8 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 					score++;
 				}
 			}
+
 			return score;
 		}
-
 	}
 }
