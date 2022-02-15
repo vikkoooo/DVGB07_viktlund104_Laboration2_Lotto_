@@ -46,12 +46,19 @@
 			this.sixCorrectTextBox = new System.Windows.Forms.TextBox();
 			this.sevenCorrectLabel = new System.Windows.Forms.Label();
 			this.sevenCorrectTextBox = new System.Windows.Forms.TextBox();
+			this.triesFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+			this.numbersFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+			this.displayFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+			this.triesFlowLayoutPanel.SuspendLayout();
+			this.numbersFlowLayoutPanel.SuspendLayout();
+			this.displayFlowLayoutPanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// yourLottoLabel
 			// 
+			this.yourLottoLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.yourLottoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-			this.yourLottoLabel.Location = new System.Drawing.Point(27, 37);
+			this.yourLottoLabel.Location = new System.Drawing.Point(3, 3);
 			this.yourLottoLabel.Name = "yourLottoLabel";
 			this.yourLottoLabel.Size = new System.Drawing.Size(100, 23);
 			this.yourLottoLabel.TabIndex = 0;
@@ -59,7 +66,7 @@
 			// 
 			// firstNumberTextBox
 			// 
-			this.firstNumberTextBox.Location = new System.Drawing.Point(133, 36);
+			this.firstNumberTextBox.Location = new System.Drawing.Point(109, 3);
 			this.firstNumberTextBox.Name = "firstNumberTextBox";
 			this.firstNumberTextBox.Size = new System.Drawing.Size(57, 20);
 			this.firstNumberTextBox.TabIndex = 1;
@@ -67,7 +74,7 @@
 			// 
 			// secondNumberTextBox
 			// 
-			this.secondNumberTextBox.Location = new System.Drawing.Point(196, 36);
+			this.secondNumberTextBox.Location = new System.Drawing.Point(172, 3);
 			this.secondNumberTextBox.Name = "secondNumberTextBox";
 			this.secondNumberTextBox.Size = new System.Drawing.Size(57, 20);
 			this.secondNumberTextBox.TabIndex = 2;
@@ -75,7 +82,7 @@
 			// 
 			// thirdNumberTextBox
 			// 
-			this.thirdNumberTextBox.Location = new System.Drawing.Point(258, 36);
+			this.thirdNumberTextBox.Location = new System.Drawing.Point(235, 3);
 			this.thirdNumberTextBox.Name = "thirdNumberTextBox";
 			this.thirdNumberTextBox.Size = new System.Drawing.Size(57, 20);
 			this.thirdNumberTextBox.TabIndex = 1;
@@ -83,7 +90,7 @@
 			// 
 			// fourthNumberTextBox
 			// 
-			this.fourthNumberTextBox.Location = new System.Drawing.Point(321, 36);
+			this.fourthNumberTextBox.Location = new System.Drawing.Point(298, 3);
 			this.fourthNumberTextBox.Name = "fourthNumberTextBox";
 			this.fourthNumberTextBox.Size = new System.Drawing.Size(57, 20);
 			this.fourthNumberTextBox.TabIndex = 2;
@@ -91,7 +98,7 @@
 			// 
 			// fifthNumberTextBox
 			// 
-			this.fifthNumberTextBox.Location = new System.Drawing.Point(384, 36);
+			this.fifthNumberTextBox.Location = new System.Drawing.Point(361, 3);
 			this.fifthNumberTextBox.Name = "fifthNumberTextBox";
 			this.fifthNumberTextBox.Size = new System.Drawing.Size(57, 20);
 			this.fifthNumberTextBox.TabIndex = 2;
@@ -99,7 +106,7 @@
 			// 
 			// sixthNumberTextBox
 			// 
-			this.sixthNumberTextBox.Location = new System.Drawing.Point(446, 36);
+			this.sixthNumberTextBox.Location = new System.Drawing.Point(424, 3);
 			this.sixthNumberTextBox.Name = "sixthNumberTextBox";
 			this.sixthNumberTextBox.Size = new System.Drawing.Size(57, 20);
 			this.sixthNumberTextBox.TabIndex = 1;
@@ -107,7 +114,7 @@
 			// 
 			// seventhNumberTextBox
 			// 
-			this.seventhNumberTextBox.Location = new System.Drawing.Point(509, 36);
+			this.seventhNumberTextBox.Location = new System.Drawing.Point(487, 3);
 			this.seventhNumberTextBox.Name = "seventhNumberTextBox";
 			this.seventhNumberTextBox.Size = new System.Drawing.Size(57, 20);
 			this.seventhNumberTextBox.TabIndex = 2;
@@ -115,8 +122,9 @@
 			// 
 			// numberLottosLabel
 			// 
+			this.numberLottosLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.numberLottosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-			this.numberLottosLabel.Location = new System.Drawing.Point(133, 100);
+			this.numberLottosLabel.Location = new System.Drawing.Point(3, 6);
 			this.numberLottosLabel.Name = "numberLottosLabel";
 			this.numberLottosLabel.Size = new System.Drawing.Size(132, 23);
 			this.numberLottosLabel.TabIndex = 0;
@@ -124,7 +132,7 @@
 			// 
 			// numberLottosTextBox
 			// 
-			this.numberLottosTextBox.Location = new System.Drawing.Point(278, 99);
+			this.numberLottosTextBox.Location = new System.Drawing.Point(141, 3);
 			this.numberLottosTextBox.Name = "numberLottosTextBox";
 			this.numberLottosTextBox.Size = new System.Drawing.Size(163, 20);
 			this.numberLottosTextBox.TabIndex = 3;
@@ -132,7 +140,7 @@
 			// 
 			// startLottoButton
 			// 
-			this.startLottoButton.Location = new System.Drawing.Point(464, 97);
+			this.startLottoButton.Location = new System.Drawing.Point(310, 3);
 			this.startLottoButton.Name = "startLottoButton";
 			this.startLottoButton.Size = new System.Drawing.Size(75, 23);
 			this.startLottoButton.TabIndex = 4;
@@ -142,8 +150,9 @@
 			// 
 			// fiveCorrectLabel
 			// 
+			this.fiveCorrectLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.fiveCorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-			this.fiveCorrectLabel.Location = new System.Drawing.Point(139, 212);
+			this.fiveCorrectLabel.Location = new System.Drawing.Point(3, 3);
 			this.fiveCorrectLabel.Name = "fiveCorrectLabel";
 			this.fiveCorrectLabel.Size = new System.Drawing.Size(52, 23);
 			this.fiveCorrectLabel.TabIndex = 0;
@@ -151,7 +160,7 @@
 			// 
 			// fiveCorrectTextBox
 			// 
-			this.fiveCorrectTextBox.Location = new System.Drawing.Point(187, 211);
+			this.fiveCorrectTextBox.Location = new System.Drawing.Point(61, 3);
 			this.fiveCorrectTextBox.Name = "fiveCorrectTextBox";
 			this.fiveCorrectTextBox.ReadOnly = true;
 			this.fiveCorrectTextBox.Size = new System.Drawing.Size(65, 20);
@@ -159,8 +168,9 @@
 			// 
 			// sixCorrectLabel
 			// 
+			this.sixCorrectLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.sixCorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-			this.sixCorrectLabel.Location = new System.Drawing.Point(264, 212);
+			this.sixCorrectLabel.Location = new System.Drawing.Point(132, 3);
 			this.sixCorrectLabel.Name = "sixCorrectLabel";
 			this.sixCorrectLabel.Size = new System.Drawing.Size(52, 23);
 			this.sixCorrectLabel.TabIndex = 0;
@@ -168,7 +178,7 @@
 			// 
 			// sixCorrectTextBox
 			// 
-			this.sixCorrectTextBox.Location = new System.Drawing.Point(312, 210);
+			this.sixCorrectTextBox.Location = new System.Drawing.Point(190, 3);
 			this.sixCorrectTextBox.Name = "sixCorrectTextBox";
 			this.sixCorrectTextBox.ReadOnly = true;
 			this.sixCorrectTextBox.Size = new System.Drawing.Size(65, 20);
@@ -176,8 +186,9 @@
 			// 
 			// sevenCorrectLabel
 			// 
+			this.sevenCorrectLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.sevenCorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-			this.sevenCorrectLabel.Location = new System.Drawing.Point(389, 212);
+			this.sevenCorrectLabel.Location = new System.Drawing.Point(261, 3);
 			this.sevenCorrectLabel.Name = "sevenCorrectLabel";
 			this.sevenCorrectLabel.Size = new System.Drawing.Size(52, 23);
 			this.sevenCorrectLabel.TabIndex = 0;
@@ -185,39 +196,76 @@
 			// 
 			// sevenCorrectTextBox
 			// 
-			this.sevenCorrectTextBox.Location = new System.Drawing.Point(438, 209);
+			this.sevenCorrectTextBox.Location = new System.Drawing.Point(319, 3);
 			this.sevenCorrectTextBox.Name = "sevenCorrectTextBox";
 			this.sevenCorrectTextBox.ReadOnly = true;
 			this.sevenCorrectTextBox.Size = new System.Drawing.Size(65, 20);
 			this.sevenCorrectTextBox.TabIndex = 5;
 			// 
+			// triesFlowLayoutPanel
+			// 
+			this.triesFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+			this.triesFlowLayoutPanel.Controls.Add(this.numberLottosLabel);
+			this.triesFlowLayoutPanel.Controls.Add(this.numberLottosTextBox);
+			this.triesFlowLayoutPanel.Controls.Add(this.startLottoButton);
+			this.triesFlowLayoutPanel.Location = new System.Drawing.Point(80, 84);
+			this.triesFlowLayoutPanel.Name = "triesFlowLayoutPanel";
+			this.triesFlowLayoutPanel.Size = new System.Drawing.Size(393, 30);
+			this.triesFlowLayoutPanel.TabIndex = 7;
+			// 
+			// numbersFlowLayoutPanel
+			// 
+			this.numbersFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+			this.numbersFlowLayoutPanel.Controls.Add(this.yourLottoLabel);
+			this.numbersFlowLayoutPanel.Controls.Add(this.firstNumberTextBox);
+			this.numbersFlowLayoutPanel.Controls.Add(this.secondNumberTextBox);
+			this.numbersFlowLayoutPanel.Controls.Add(this.thirdNumberTextBox);
+			this.numbersFlowLayoutPanel.Controls.Add(this.fourthNumberTextBox);
+			this.numbersFlowLayoutPanel.Controls.Add(this.fifthNumberTextBox);
+			this.numbersFlowLayoutPanel.Controls.Add(this.sixthNumberTextBox);
+			this.numbersFlowLayoutPanel.Controls.Add(this.seventhNumberTextBox);
+			this.numbersFlowLayoutPanel.Location = new System.Drawing.Point(12, 12);
+			this.numbersFlowLayoutPanel.Name = "numbersFlowLayoutPanel";
+			this.numbersFlowLayoutPanel.Size = new System.Drawing.Size(557, 30);
+			this.numbersFlowLayoutPanel.TabIndex = 8;
+			// 
+			// displayFlowLayoutPanel
+			// 
+			this.displayFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+			this.displayFlowLayoutPanel.Controls.Add(this.fiveCorrectLabel);
+			this.displayFlowLayoutPanel.Controls.Add(this.fiveCorrectTextBox);
+			this.displayFlowLayoutPanel.Controls.Add(this.sixCorrectLabel);
+			this.displayFlowLayoutPanel.Controls.Add(this.sixCorrectTextBox);
+			this.displayFlowLayoutPanel.Controls.Add(this.sevenCorrectLabel);
+			this.displayFlowLayoutPanel.Controls.Add(this.sevenCorrectTextBox);
+			this.displayFlowLayoutPanel.Location = new System.Drawing.Point(80, 156);
+			this.displayFlowLayoutPanel.Name = "displayFlowLayoutPanel";
+			this.displayFlowLayoutPanel.Size = new System.Drawing.Size(393, 29);
+			this.displayFlowLayoutPanel.TabIndex = 9;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(634, 279);
-			this.Controls.Add(this.sevenCorrectTextBox);
-			this.Controls.Add(this.sixCorrectTextBox);
-			this.Controls.Add(this.fiveCorrectTextBox);
-			this.Controls.Add(this.startLottoButton);
-			this.Controls.Add(this.numberLottosTextBox);
-			this.Controls.Add(this.seventhNumberTextBox);
-			this.Controls.Add(this.fourthNumberTextBox);
-			this.Controls.Add(this.sixthNumberTextBox);
-			this.Controls.Add(this.thirdNumberTextBox);
-			this.Controls.Add(this.fifthNumberTextBox);
-			this.Controls.Add(this.secondNumberTextBox);
-			this.Controls.Add(this.sevenCorrectLabel);
-			this.Controls.Add(this.firstNumberTextBox);
-			this.Controls.Add(this.sixCorrectLabel);
-			this.Controls.Add(this.numberLottosLabel);
-			this.Controls.Add(this.fiveCorrectLabel);
-			this.Controls.Add(this.yourLottoLabel);
+			this.ClientSize = new System.Drawing.Size(579, 236);
+			this.Controls.Add(this.displayFlowLayoutPanel);
+			this.Controls.Add(this.triesFlowLayoutPanel);
+			this.Controls.Add(this.numbersFlowLayoutPanel);
 			this.Name = "MainForm";
 			this.Text = "Lotto 1.0";
+			this.triesFlowLayoutPanel.ResumeLayout(false);
+			this.triesFlowLayoutPanel.PerformLayout();
+			this.numbersFlowLayoutPanel.ResumeLayout(false);
+			this.numbersFlowLayoutPanel.PerformLayout();
+			this.displayFlowLayoutPanel.ResumeLayout(false);
+			this.displayFlowLayoutPanel.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 		}
+
+		private System.Windows.Forms.FlowLayoutPanel triesFlowLayoutPanel;
+		private System.Windows.Forms.FlowLayoutPanel numbersFlowLayoutPanel;
+
+		private System.Windows.Forms.FlowLayoutPanel displayFlowLayoutPanel;
 
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;

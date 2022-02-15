@@ -8,6 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Program will simulate lotto draws between selected numbers (currently 1 to 35 inclusive)
+ * Choose how many numbers is drawn (currently 7)
+ * Will simulate number of times (currently 999 999)
+ *
+ * It will tell how many times the user won, with how many correct numbers
+ * 
+ * By Viktor Lundberg (viktlund104)
+ * 2022-02-15
+ */
+
 namespace DVGB07_viktlund104_Laboration2_Lotto
 {
 	public partial class MainForm : Form
@@ -15,10 +26,11 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 		// Settings
 		private int minBound = 1; // low bound, inclusive
 		private int maxBound = 35; // high bound, inclusive
-		private int minSimulations = 1; //inclusive
-		private int maxSimulations = 999999; //inclusive
-		private int n; // how many times to simulate (user choice)
 		private int lottoNumbers = 7; // how many lotto numbers to pull
+		
+		private int minSimulations = 1; // inclusive
+		private int maxSimulations = 999999; // inclusive
+		private int n; // how many times to simulate (user choice)
 
 		// Instances
 		private List<int> choices;
@@ -194,7 +206,8 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 			return true;
 		}
 		
-		// Generates a new lotto draw. It then checks how many the user had correct, before it calls itself again
+		// Generates a new lotto draw. It then checks how many the user had correct. Runs until we have reached number
+		// of simulations from user input
 		private void generateLotto()
 		{
 			List<int> possibleNumbers = new List<int>(maxBound - minBound);
@@ -262,5 +275,6 @@ namespace DVGB07_viktlund104_Laboration2_Lotto
 
 			return score;
 		}
+
 	}
 }
